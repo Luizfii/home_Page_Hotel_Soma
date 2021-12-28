@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESERVAS</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient( to right, rgb(20, 220, 193), rgb(117, 143, 155));
+        }
+        .box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50);
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            border-radius: 15px;
+            width: 20%;
+        }
+        fieldset{
+            border: 3px solid dodgerblue;
+        }
+        legend{
+            border: 1px solid dodgerblue;
+            padding:10px ;
+            text-align: center;
+            background-color: dodgerblue;
+            border-radius: 15%;
+            color: white;
+        }
+        .inputBox{
+            position: relative;
+        }
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="">
+            <fieldset>
+        <legend>
+        <h1>Reservas</h1> 
+         </legend>
+        <br>
+        <form>
+        
+            <p>Informações Pessoais</p>
+            <div>
+                <label>Nome completo</label>
+                <input type="text" name="nome" id="nome">
+            </div>
+            <div>
+                <label>Data de Nascimento</label>
+                <input type="date" name="date" id="date">
+            </div>
+            <div>
+                <p>Sexo</p>
+                <input type="radio" name="genero" id="feminino" value="feminino" required>
+                <label for="feminino">Feminino</label>
+                <input type="radio" name="genero" id="masculino" value="masculino" required>
+                <label for="masculino">Masculino</label>
+            </div>
+            <div>
+                <p>Estado Civil</p>
+                <input type="radio" name="eCivil" id="solteiro" value="solteiro" required>
+                <label for="solteiro">Solteiro</label>
+                <input type="radio" name="eCivil" id="casado" value="casado" required>
+                <label for="casado">Casado</label>
+                <input type="radio" name="eCivil" id="divorciado" value="divorciado" required>
+                <label for="divorciado">Divorciado</label>
+                <input type="radio" name="eCivil" id="viuvo" value="viuvo" required>
+                <label for="viuvo">Viúvo</label>
+            </div>
+            <div>
+                <label>Nacionalidade</label>
+                <input type="text" name="nacio" id="nacio">
+            </div>
+            <div>
+                <label>Naturalidade</label>
+                <input type="text" name="natu" id="natu">
+            </div>
+            <div>
+                <label>CPF</label>
+                <input type="number" name="cpf" id="cpf">
+            </div>
+            <div>
+                <label>RG</label>
+                <input type="number" name="rg" id="rg">
+            </div>     
+            <div>
+                <label>UF</label>
+                <input type="text" name="uni_Fed" id="uni_Fed">
+            </div>       
+            <div>
+                <label>Orgão Expedidor</label>
+                <input type="text" name="org-Exp" id="org_Exp">
+            </div> 
+            <div>
+                <label>Observações</label>
+                <input type="text" name="obs" id="obs">
+            </div> 
+            <div>
+                <p>Endereço e Contato</p>
+                <label>Rua/Av.</label>
+                <input type="text" name="street" id="street"><br>
+                <label>Número</label>
+                <input type="number" name="num" id="num"><br>
+                <label>Bairro</label>
+                <input type="text" name="district" id="district"><br>
+                <label>cidade</label>
+                <input type="text" name="city" id="city"><br>
+                <label>Estado</label>
+                <input type="text" name="state" id="state"><br>
+                <label>CEP</label>
+                <input type="number" name="cep" id="cep"><br>
+                <label>Telefone</label>
+                <input type="number" name="tellphone" id="tellphone"><br>
+                <label>Celular</label>
+                <input type="number" name="cell" id="cll"><br>
+                <label>E-mail</label>
+                <input type="email" name="email" id="email">
+            </div>                 
+        </fieldset>
+    </form>
+    <a>Obrigado pela preferência.</a><br>
+    <a>O Hotel Soma fica feliz com sua visita.</a>
+
+</div>
+
+  
+</body>
+</html>
