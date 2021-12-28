@@ -6,29 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RESERVAS</title>
     <style>
-        body{
+          body{
             font-family: Arial, Helvetica, sans-serif;
             background-image: linear-gradient( to right, rgb(20, 220, 193), rgb(117, 143, 155));
         }
+        .dado{
+            font-size: 20px;
+        }
+        .msg{
+            font-size: 20px;
+            left:25px;
+        }
         .box{
+            color: white;
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50);
-            background-color: rgba(0, 0, 0, 0.8);
+            top: 10%;
+            left: 35%;
+            transform: translate(-40%,-30);
+            background-color: rgba(55, 65, 63, 0.158);
             padding: 15px;
             border-radius: 15px;
-            width: 20%;
+            width: 30%;
         }
         fieldset{
             border: 3px solid dodgerblue;
         }
         legend{
             border: 1px solid dodgerblue;
-            padding:10px ;
+            padding:10px;
             text-align: center;
             background-color: dodgerblue;
-            border-radius: 15%;
+            border-radius: 8px;
             color: white;
         }
         .inputBox{
@@ -39,7 +47,23 @@
             border: none;
             border-bottom: 1px solid white;
             outline: none;
-            color:white;
+            color: white;
+            font-size: 15px;
+            width:100%;
+            letter-spacing:2px;
+        }
+        .labelInput{
+            position: relative;
+            top:0px;
+            left:0px;
+            pointer-events:none;
+            transition:-5s;
+        }
+        .data_Nas{
+            border:none;
+            padding:8px;
+            border-radius:10px;
+            outline:none;
         }
     </style>
 </head>
@@ -48,20 +72,21 @@
         <form action="">
             <fieldset>
         <legend>
-        <h1>Reservas</h1> 
+        <h1<b>Reservas</b></h1> 
          </legend>
         <br>
-        <form>
-        
-            <p>Informações Pessoais</p>
-            <div>
-                <label>Nome completo</label>
-                <input type="text" name="nome" id="nome">
+        <div>            
+            <p class="dado" >Informações Pessoais</p>
+            <div class="inputBox">
+                <label for="nome" class="labelInput">Nome completo</label>
+                <input type="text" name="nome" id="nome" class="inputUser" required>
             </div>
-            <div>
-                <label>Data de Nascimento</label>
-                <input type="date" name="date" id="date">
+            <br><br>
+            <div class="inputBox">
+                <label for="data_Nas">Data de Nascimento</label>
+                <input type="date" name="data_Nas" id="data_Nas" class="inputUser" required>
             </div>
+            <br><br>
             <div>
                 <p>Sexo</p>
                 <input type="radio" name="genero" id="feminino" value="feminino" required>
@@ -69,8 +94,9 @@
                 <input type="radio" name="genero" id="masculino" value="masculino" required>
                 <label for="masculino">Masculino</label>
             </div>
+            <br><br>
             <div>
-                <p>Estado Civil</p>
+                <p >Estado Civil</p>
                 <input type="radio" name="eCivil" id="solteiro" value="solteiro" required>
                 <label for="solteiro">Solteiro</label>
                 <input type="radio" name="eCivil" id="casado" value="casado" required>
@@ -80,62 +106,86 @@
                 <input type="radio" name="eCivil" id="viuvo" value="viuvo" required>
                 <label for="viuvo">Viúvo</label>
             </div>
-            <div>
-                <label>Nacionalidade</label>
-                <input type="text" name="nacio" id="nacio">
+            <br><br>
+            <div class="inputBox">
+                <label for="nacio" class="labelInput">Nacionalidade</label>
+                <input type="text" name="nacio" id="nacio" class="inputUser" required>
             </div>
-            <div>
-                <label>Naturalidade</label>
-                <input type="text" name="natu" id="natu">
+            <br><br>
+            <div class="inputBox">
+                <label for="natu" class="labelInput">Naturalidade</label>
+             <input type="text" name="natu" id="natu" class="inputUser" required>
             </div>
-            <div>
-                <label>CPF</label>
-                <input type="number" name="cpf" id="cpf">
+            <br><br>
+            <div class="inputBox">
+                <label for="cpf" class="labelInput">CPF</label>
+                <input type="number" name="cpf" id="cpf" class="inputUser" required>
             </div>
-            <div>
-                <label>RG</label>
-                <input type="number" name="rg" id="rg">
-            </div>     
-            <div>
-                <label>UF</label>
-                <input type="text" name="uni_Fed" id="uni_Fed">
-            </div>       
-            <div>
-                <label>Orgão Expedidor</label>
-                <input type="text" name="org-Exp" id="org_Exp">
+            <br><br>
+            <div class="inputBox">
+                <label for="rg" class="labelInput">RG</label>
+                <input type="number" name="rg" id="rg" class="inputUser" required>
+            </div>   
+            <br><br>  
+            <div class="inputBox">
+                <label for="uni_Fed" class="labelInput">UF</label>
+                <input type="text" name="uni_Fed" id="uni_Fed" class="inputUser" required>
+            </div>  
+            <br><br>     
+            <div class="inputBox">
+                <label for="org_Exp" class="labelInput">Orgão Expedidor</label>
+                <input type="text" name="org_Exp" id="org_Exp" class="inputUser" required>
             </div> 
-            <div>
-                <label>Observações</label>
-                <input type="text" name="obs" id="obs">
+            <br><br>
+            <div class="inputBox">
+                <label for="obs" class="labelInput">Observações</label>
+                <input type="text" name="obs" id="obs" class="inputUser" required>
             </div> 
+            <br><br>
             <div>
-                <p>Endereço e Contato</p>
-                <label>Rua/Av.</label>
-                <input type="text" name="street" id="street"><br>
-                <label>Número</label>
-                <input type="number" name="num" id="num"><br>
-                <label>Bairro</label>
-                <input type="text" name="district" id="district"><br>
-                <label>cidade</label>
-                <input type="text" name="city" id="city"><br>
-                <label>Estado</label>
-                <input type="text" name="state" id="state"><br>
-                <label>CEP</label>
-                <input type="number" name="cep" id="cep"><br>
-                <label>Telefone</label>
-                <input type="number" name="tellphone" id="tellphone"><br>
-                <label>Celular</label>
-                <input type="number" name="cell" id="cll"><br>
-                <label>E-mail</label>
-                <input type="email" name="email" id="email">
+                <p>Endereço e Contato</p><br><br>
+                <div>
+                <label for="street" class="labelInput">Rua/Av.</label>
+                <input type="text" name="street" id="street" class="inputUser" required><br><br>
+               </div>
+                <div>
+                <label for="num" class="labelInput">Número</label>
+                <input type="number" name="num" id="num" class="inputUser" required><br><br>
+                </div>
+                <div>
+                <label for="district" class="labelInput">Bairro</label>
+                <input type="text" name="district" id="district"class="inputUser" required><br><br>
+                </div>
+                <div>
+                <label for="city" class="labelInput">cidade</label>
+                <input type="text" name="city" id="city" class="inputUser" required><br><br>
+                </div>
+                <div>
+                <label for="state" class="labelInput">Estado</label>
+                <input type="text" name="state" id="state" class="inputUser" required><br><br>
+                </div>
+                <div>
+                <label for="cep" class="labelInput">CEP</label>
+                <input type="number" name="cep" id="cep" class="inputUser" required><br><br>
+                </div>
+                <div>
+                <label for="phone" class="labelInput">Telefone</label>
+                <input type="tel" name="phone" id="phone" class="inputUser" required><br><br>
+                </div>
+                <div>
+                <label for="cell" class="labelInput">Celular</label>
+                <input type="tel" name="cell" id="cell" class="inputUser" required><br><br>
+                </div>
+                <div>
+                <label for="e_mail" class="labelInput">E-mail</label>
+                <input type="email" name="email" id="email" class="inputUser" required><br><br>
+                </div>
             </div>                 
         </fieldset>
     </form>
-    <a>Obrigado pela preferência.</a><br>
-    <a>O Hotel Soma fica feliz com sua visita.</a>
+    <a class="msg">Obrigado pela preferência.</a><br>
+    <a class="msg">O Hotel Soma fica feliz com sua visita.</a>
 
 </div>
-
-  
 </body>
 </html>
